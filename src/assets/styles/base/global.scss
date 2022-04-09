@@ -1,0 +1,13 @@
+:root {
+  @each $name, $color in $colors {
+    #{$name}: #{$color};
+  }
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.screen-out {
+  @include alternative;
+}

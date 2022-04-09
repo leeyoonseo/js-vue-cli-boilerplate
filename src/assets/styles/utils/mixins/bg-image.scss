@@ -1,0 +1,13 @@
+$prefix-image-path: '@/assets/img/';
+
+@mixin bg-image($background-url, $width, $height, $important: false) {
+  @if $important {
+    background-image: url('#{$prefix-image-path}#{$background-url}.png') !important;
+  } @else {
+    background-image: url('#{$prefix-image-path}#{$background-url}.png');
+  }
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $width $height;
+}
