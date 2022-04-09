@@ -48,4 +48,12 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['src/views/*', 'src/layouts/*'],
+      rules: {
+        'vue/multi-word-component-names': 0,
+      },
+    },
+  ],
 };
