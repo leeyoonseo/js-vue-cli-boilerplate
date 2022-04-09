@@ -1,11 +1,11 @@
 <template>
-  <div class="layout__default">
-    <h1>Layout: Default</h1>
+  <div class="layout__dev">
+    <h1>Layout: Dev</h1>
     <slot></slot>
   </div>
 </template>
 <style lang="scss">
-.layout__default {
+.layout__dev {
   padding: 60px;
 
   h1 {

@@ -3,9 +3,10 @@
   "scss.validate": false,
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true,
     "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
   },
+  "eslint.validate": ["javascript"],
   "stylelint.validate": ["css", "scss", "vue"],
   "stylelint.snippet": ["css", "scss", "vue"],
 }

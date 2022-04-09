@@ -1,6 +1,20 @@
 <template>
-  <router-view />
+  <component :is="asyncLayoutComponent">
+    <router-view />
+  </component>
 </template>
+<script setup>
+import { defineAsyncComponent } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const asyncLayoutComponent = defineAsyncComponent(() => {
+  const defaultLayout = 'default';
+  const { layout } = router.currentRoute.value.meta;
+
+  return import(`./layouts/${layout || defaultLayout}.vue`);
+});
+</script>
 
 <style lang="scss">
 #app {
@@ -9,18 +23,5 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    color: #2c3e50;
-    font-weight: bold;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>

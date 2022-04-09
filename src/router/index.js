@@ -6,6 +6,14 @@ const routes = [
     name: 'home',
     component: () => import('@/views/home.vue'),
   },
+  {
+    path: '/dev',
+    name: 'dev',
+    meta: {
+      layout: 'dev',
+    },
+    component: () => import('@/views/dev.vue'),
+  },
 ];
 
 const router = createRouter({
