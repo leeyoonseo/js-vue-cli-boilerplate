@@ -1,24 +1,14 @@
 # js-vue-cli-boilerplate
 
-## Project setup
-```
-npm install
-```
+## Specification
+- Node v16.x
+- Vue v3.2.13
+- Store : Pinia v2.0.11
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Recommended IDE Setup
+- [VSCode](https://code.visualstudio.com/)
+- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- [Vue Volar extension Pack](https://marketplace.visualstudio.com/items?itemName=MisterJ.vue-volar-extention-pack)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+:warning: You need to disable Vetur to avoid conflicts.
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
