@@ -10,6 +10,7 @@
       "@/components/*": ["src/components/*"],
       "@/assets/*": ["src/assets/*"],
       "@/stores/*": ["src/stores/*"],
+      "@/plugins/*": ["src/plugins/*"],
     },
     "lib": [
       "esnext",
