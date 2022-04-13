@@ -47,13 +47,11 @@ module.exports = {
         ignore: ['maxLength'],
       },
     ],
-  },
-  overrides: [
-    {
-      files: ['src/views/*', 'src/layouts/*'],
-      rules: {
-        'vue/multi-word-component-names': 0,
+    'vue/multi-word-component-names': [
+      'error',
+      {
+        ignores: ['src/views/*', 'src/layouts'],
       },
-    },
-  ],
+    ],
+  },
 };

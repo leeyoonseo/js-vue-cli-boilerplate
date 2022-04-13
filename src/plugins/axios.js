@@ -30,7 +30,4 @@ instance.interceptors.response.use(
   }
 );
 
-const apiModules = require.context('./_apis', true, /\w+\.(js)$/);
-
-// console.log(apiModules);
 export default instance;

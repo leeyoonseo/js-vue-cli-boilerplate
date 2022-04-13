@@ -1,8 +1,8 @@
-import Send from '../axios';
+import axios from '../axios';
 
 export default {
   getCommon() {
-    return Send({
+    return axios({
       url: '',
       method: 'get',
     });
