@@ -3,15 +3,14 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    es2021: true,
   },
-  extends: [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:vue/essential', 'prettier'],
   parserOptions: {
-    parser: '@babel/eslint-parser',
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
+  plugins: ['vue', 'eslint-plugin-prettier'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -41,17 +40,14 @@ module.exports = {
     'no-unused-vars': ['warn', {}],
     'vue/no-parsing-error': [0, {}],
     'no-lonely-if': 0,
-    'vue/attribute-hyphenation': [
-      'always' | 'never',
-      {
-        ignore: ['maxLength'],
-      },
-    ],
-    'vue/multi-word-component-names': [
-      'error',
-      {
-        ignores: ['src/views/*', 'src/layouts'],
-      },
-    ],
+    'vue/multi-word-component-names': 0,
   },
+  overrides: [
+    {
+      files: ['src/components/*'],
+      rules: {
+        'vue/multi-word-component-names': 'error',
+      },
+    },
+  ],
 };
